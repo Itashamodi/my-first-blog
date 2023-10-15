@@ -1,94 +1,23 @@
-{% load static %}
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Itasha's Blogs</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <title>Django Girls blog</title>
     </head>
     <body>
-    <header>
-        <h1><a href="/">Diving into Japanese 🎎</a></h1></header>
-        <H3>Why learn Japanese?</H3>
-        <img src="blog\templates\blog\Images\zenken.png" alt="ZenkenIndia" width="500" height="600"/>
-        <p>Hi everyone!👋 Today I’m going to talk about why you should learn Japanese.<br>
+        <header>
+            <h1><a href="/">Django Girls Blog</a></h1>
+        </header>
 
-            I recently attended a pre-placement talk with Zenken India from Mr. Abhishek sir for the final year B. tech students for an opportunity to learn the Japanese language and work in Japan. I was inspired by the talk and decided to write a blog post about it.<br>
-            
-            Learning a new language is a fascinating adventure. The countless benefits of acquiring a new language are undeniable. Of all the in-demand foreign languages, why choose Japanese?<br>
-            
-            <h4>Here are three compelling reasons:</h4>
-            
-                    🚅<b>Japanese will set you apart from the crowd.</b> It is different because it isn’t an uncomplicated language to embrace.
-                <br>🚅<b>Career-wise, Japanese is one of the top 5 most useful languages to study.</b>The Japanese economy is the third largest in the world, and Japanese companies are global leaders in many industries.
-                <br>🚅<b>The colorful and vigorous cultural aspect of Japan.</b>Japan is a country with a rich and unique culture, and learning Japanese will give you access to it.
-            <h4>
-                <br>If you’re interested in learning Japanese, here are a few tips:
-            </h4>
-                <li>Find a good language course or tutor. I use duolingo and Udemy<br></li>
-                   <li>Immerse yourself in the language as much as possible. Watch Japanese movies and TV shows, listen to Japanese music, and read Japanese books and articles.</li> 
-                    <li>Don’t be afraid to make mistakes. Everyone makes mistakes when they’re learning a new language. The important thing is to keep practicing.</li>
-                    <li>Be patient. Learning a new language takes time and effort. Don’t get discouraged if you don’t see results immediately.</li>
-            </p>
-            <h3>Here are some of the things I learned about the Japanese language</h3>
+        <article>
+            <time>published: 14.06.2014, 12:14</time>
+            <h2><a href="">My first post</a></h2>
+            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        </article>
 
-                <li>Japanese is a mora-timed language, meaning that all the Japanese characters take equal pronunciation time.</li>
-                <li>Japanese has 3 scripts: Hiragana, Katakana, and Kanji.
-                 <l1>Hiragana and Katakana are phonetic scripts, while Kanji is a logographic script.</l1>
-                <li>Hiragana is the most widely used script in Japanese, and it is the first script that learners learn.</li>
-                <li>Katakana is used to write foreign words and names.</li>
-                <li>Kanji is the most complex script, but it is also the most expressive.</li></li>
-                I’m excited to start learning Japanese, and I hope that you will too! It is a beautiful and challenging language, and it is a valuable skill to have.</h3>
-        <h2><b>Hiragana🏯</b></h2>
-        <p>Hiragana is the most extensively used, due to its Japanese origins as well as the language’s grammatical structure. </p>
-        <br>
-        <p>Japanese, like the English alphabet, includes <b>five vowels:</b></p>
-        <ul>あ(aa) — a</ul>
-        <ul>い(ee) — i</ul>
-        <ul>う(uw) — u</ul>
-        <ul>え(ae) — e</ul>
-        <ul>え(ou) — o</ul>
-        <p>It works!</p>
-        <p>They are also related to the matras in Hindi.<br>
-            Following the vowels are the remaining characters of the script, which are a mix of certain consonant sounds and the aforementioned vowels.</p>
-        <img src="blog/templates/blog/Images/hiragana.png" alt="Hiragana" height="500" width="600"/>
-        <img src="blog/templates/blog/Images/Thinkgif.gif" alt="thinking" height="20%" width="20%"  />
-        <h2><b>What does it mean? 🤔</b></h2>
-        Suppose under the column n
-
-        <br>the letters are pronounced as -
-        <ul>な(N + aa) as na</ul>
-            <ul>に(N + ee) as ni</ul>
-                <ul>ぬ(N + uw) as nu</ul>
-                    <ul>ね(N + ae) as ne</ul>
-                        <ul>の(N + ou) as no</ul>
-    
-            <h2>Why am I learning Japanese? 😍</h2>
-
-                <p>I’m learning Japanese because I’m interested in Japanese culture and because I want to have a career in Japan. I’ve always been fascinated by Japanese anime, manga, and video games, and I’m eager to learn more about the country and its people. I’m also interested in working in Japan’s tech industry, which is one of the most innovative in the world.
-                
-                I know that learning Japanese will be challenging, but I’m up for the challenge. I’m excited to embark on this new journey, and I hope that I can inspire others to learn Japanese as well.🎋</p>
-                <img src="blog/templates/blog/Images/sir.jpg"height="500" width="600" />
-                <img src="blog/templates/blog/Images/maam.jpg" height="500" width="700"/>
-                <h2><em><b>Mata aimashō Nihon! (see you Japan)🎏</b></em></h2>
-                <img src="blog/templates/blog/Images/CherryBlossomJapan.jpg" height="40%" width="60%">;
-                <h2><b>BAI BAI! 👋❤️</b></h2>
-     </header>
-<main class="container">
-    <div class="row">
-        <div class="col">
-            {% for post in posts %}
-                <article class="post">
-                    <time class="date">
-                        {{ post.published_date }}
-                    </time>
-                    <h2><a href="">{{ post.title }}</a></h2>
-                    <p>{{ post.text|linebreaksbr }}</p>
-                </article>
-            {% endfor %}
-        </div>
-    </div>
-</main>
-            </body>
+        <article>
+            <time>published: 14.06.2014, 12:14</time>
+            <h2><a href="">My second post</a></h2>
+            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
+        </article>
+    </body>
 </html>
